@@ -1,0 +1,15 @@
+/*      '.' for id, fx:id, class      */
+/*      '#' for fx:id                 */
+
+#anchor_pane {
+    -fx-background-color: #FFFFFF;
+}
+
+
+.hover_class_7:hover {
+    -fx-opacity: 0.7;
+}
+
+.hover_class_9:hover {
+    -fx-opacity: 0.7;
+}

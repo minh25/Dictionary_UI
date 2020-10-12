@@ -1,0 +1,21 @@
+
+#show_meaning_pane {
+    color: #FFFFFF;
+}
+
+#show_word_label {
+    -fx-font-size: 100;
+    -fx-font-style: italic;
+}
+
+#show_word_pane {
+    /*-fx-background-color: skyblue, derive(skyblue, 25%), derive(skyblue, 50%), derive(skyblue, 75%), derive(skyblue, 100%);*/
+    /*-fx-background-insets: 20, 40, 60, 80, 100;*/
+}
+
+#voice_pane {
+    -fx-background-image: url("../img/voice_image.png");
+    -fx-background-radius: 20;
+    -fx-background-size: contain;
+    -fx-border-radius: 20;
+}

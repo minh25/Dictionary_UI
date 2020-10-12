@@ -1,0 +1,29 @@
+/*-fx-background-color: #1784FF;*/
+
+#search_bar_pane {
+    -fx-background-color: #1784FF;
+}
+
+#open_menu_pane {
+    -fx-background-image: url("../img/menu_image.png");
+    -fx-background-size: contain;
+}
+
+#search_pane {
+    -fx-background-color: #1784ff;
+}
+
+#search_text_field {
+    -fx-background-radius: 15;
+}
+
+#search_text_field:focused {
+    -fx-background-radius: 15;
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+#search_button_pane {
+    -fx-background-image: url("../img/search_image.png");
+    -fx-background-size: contain;
+}

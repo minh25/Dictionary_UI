@@ -1,0 +1,31 @@
+
+
+#menu {
+    -fx-background-color: #ffffff;
+}
+
+#account_pane {
+    -fx-background-color: #1097ff;
+    -fx-opacity: 0.7;
+}
+
+#account_pane:hover {
+    -fx-opacity: 1;
+}
+
+#close_menu_pane {
+    -fx-background-color: #c0c0c0;
+    -fx-opacity: 0.5;
+}
+
+.list {
+    -fx-background-color: #ffffff;
+}
+
+.list:hover {
+    -fx-background-color: #54b4ff;
+}
+
+.menu_label {
+    -fx-alignment: center;
+}

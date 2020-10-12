@@ -1,0 +1,12 @@
+
+#title_text {
+    -fx-font-size: 40;
+    -fx-font-style: italic;
+}
+
+#add_word_pane {
+    -fx-background-image: url("../img/add_word_image.png");
+    -fx-background-radius: 20;
+    -fx-background-size: contain;
+    -fx-border-radius: 20;
+}
