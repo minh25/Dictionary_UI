@@ -4,76 +4,47 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root_anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="400" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Scene1Controller">
-    <AnchorPane fx:id="dictionary_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <AnchorPane fx:id="search_bar_pane" prefHeight="40.0" styleClass="hover_class_9" AnchorPane.leftAnchor="0.0"
-                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <Pane fx:id="open_menu_pane" onMouseClicked="#open_menu_pane" prefHeight="40" prefWidth="40"
-                  styleClass="hover_class_7" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
-            <AnchorPane fx:id="search_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0"
-                        AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
-                <TextField fx:id="search_text_field" onKeyTyped="#show_word_onKeyTyped" prefHeight="30"
-                           AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+<AnchorPane fx:id="root_anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Scene1Controller">
+    <AnchorPane fx:id="dictionary_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane fx:id="search_bar_pane" prefHeight="40.0" styleClass="hover_class_9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Pane fx:id="open_menu_pane" onMouseClicked="#open_menu_pane" prefHeight="40" prefWidth="40" styleClass="hover_class_7" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="search_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+                <TextField fx:id="search_text_field" onKeyTyped="#show_word_onKeyTyped" prefHeight="30" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
                     <font>
-                        <Font size="14.0"/>
+                        <Font size="14.0" />
                     </font>
                 </TextField>
             </AnchorPane>
-            <Pane fx:id="search_button_pane" onMouseClicked="#show_meaning_onKeyTyped" prefHeight="40"
-                  prefWidth="40" styleClass="hover_class_7" AnchorPane.rightAnchor="0.0"
-                  AnchorPane.topAnchor="0.0"/>
+            <Pane fx:id="search_button_pane" onMouseClicked="#show_meaning_onMouseClicked" prefHeight="40" prefWidth="40" styleClass="hover_class_7" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
         </AnchorPane>
-        <AnchorPane fx:id="show_meaning_pane" layoutY="40.0" AnchorPane.bottomAnchor="0.0"
-                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
-            <AnchorPane fx:id="show_meaning_pane_child" AnchorPane.bottomAnchor="0.0"
-                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <Label fx:id="show_meaning_label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        <AnchorPane fx:id="show_meaning_pane" layoutY="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+            <AnchorPane fx:id="show_meaning_pane_child" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <Label fx:id="show_meaning_label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="0.0" />
             </AnchorPane>
-            <AnchorPane fx:id="voice_pane" styleClass="hover_class_7" prefHeight="40.0" prefWidth="40.0"
-                        AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0"/>
+            <AnchorPane fx:id="voice_pane" prefHeight="40.0" prefWidth="40.0" styleClass="hover_class_7" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0" />
         </AnchorPane>
     </AnchorPane>
-    <Pane fx:id="close_menu_pane" onMouseClicked="#close_menu_pane" visible="false" AnchorPane.bottomAnchor="0.0"
-          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
-    <AnchorPane fx:id="menu" layoutX="-200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
-                AnchorPane.topAnchor="0.0">
-        <AnchorPane fx:id="account_pane" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0"
-                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
-        <AnchorPane fx:id="list_pane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
-                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
-            <AnchorPane fx:id="dict_pane" onMouseClicked="#open_dictionary_pane" prefHeight="40.0"
-                        prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0"
-                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <Label styleClass="menu_label" text="Dictionary" AnchorPane.bottomAnchor="0.0"
-                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+    <Pane fx:id="close_menu_pane" onMouseClicked="#close_menu_pane" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    <AnchorPane fx:id="menu" layoutX="-200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane fx:id="account_pane" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <AnchorPane fx:id="list_pane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <AnchorPane fx:id="dict_pane" onMouseClicked="#open_dictionary_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <Label styleClass="menu_label" text="Dictionary" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             </AnchorPane>
-            <AnchorPane fx:id="open_your_word_pane" onMouseClicked="#open_your_word_pane" prefHeight="40.0"
-                        prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0"
-                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
-                <Label styleClass="menu_label" text="Your word" AnchorPane.bottomAnchor="0.0"
-                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            <AnchorPane fx:id="open_your_word_pane" onMouseClicked="#open_your_word_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                <Label styleClass="menu_label" text="Your word" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             </AnchorPane>
-            <AnchorPane fx:id="info_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list"
-                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-                        AnchorPane.topAnchor="80.0">
-                <Label styleClass="menu_label" text="Information" AnchorPane.bottomAnchor="0.0"
-                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            <AnchorPane fx:id="open_gg_pane" onMouseClicked="#open_gg_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+                <Label styleClass="menu_label" text="Google translate" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             </AnchorPane>
-            <AnchorPane fx:id="setting_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list"
-                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-                        AnchorPane.topAnchor="120.0">
-                <Label styleClass="menu_label" text="Setting" AnchorPane.bottomAnchor="0.0"
-                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            <AnchorPane fx:id="info_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+                <Label styleClass="menu_label" text="Information" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             </AnchorPane>
-            <AnchorPane fx:id="buy_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list"
-                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-                        AnchorPane.topAnchor="160.0">
-                <Label styleClass="menu_label" text="Buy now" AnchorPane.bottomAnchor="0.0"
-                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            <AnchorPane fx:id="setting_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="160.0">
+                <Label styleClass="menu_label" text="Setting" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </AnchorPane>
+            <AnchorPane fx:id="buy_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                <Label styleClass="menu_label" text="Buy now" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             </AnchorPane>
         </AnchorPane>
     </AnchorPane>

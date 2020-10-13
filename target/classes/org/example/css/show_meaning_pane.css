@@ -1,7 +1,6 @@
 
-
 #show_meaning_pane {
-    color: #FFFFFF;
+    -fx-background-color: #FFFFFF;
 }
 
 #show_word_label {

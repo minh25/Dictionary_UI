@@ -4,7 +4,7 @@
     -fx-font-style: italic;
 }
 
-#add_word_pane {
+#open_add_word_pane {
     -fx-background-image: url("../img/add_word_image.png");
     -fx-background-radius: 20;
     -fx-background-size: contain;

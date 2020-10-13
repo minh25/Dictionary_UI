@@ -1,0 +1,12 @@
+#add_to_db_pane {
+    -fx-background-color: #1784FF;
+}
+
+#add_word_pane {
+    -fx-background-color: #FFFFFF;
+}
+
+#close_add_word_pane {
+    -fx-background-color: #c0c0c0;
+    -fx-opacity: 0.5;
+}
