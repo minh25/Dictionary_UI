@@ -55,8 +55,9 @@ public class Get {
     }
 
     public static void main(String[] args) throws IOException {
-        Word x = Get.GetWord("word");
-        System.out.println(x);
+//        Word x = Get.GetWord("word");
+//        System.out.println(x);
+        GetAudio("word");
     }
 
 }

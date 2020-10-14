@@ -20,7 +20,7 @@
         <AnchorPane fx:id="show_meaning_pane" layoutY="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
             <AnchorPane fx:id="show_meaning_pane_child" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             </AnchorPane>
-            <AnchorPane fx:id="voice_pane" prefHeight="40.0" prefWidth="40.0" styleClass="hover_class_7" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+<!--            <AnchorPane fx:id="voice_pane" prefHeight="40.0" prefWidth="40.0" styleClass="hover_class_7" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0" />-->
         </AnchorPane>
     </AnchorPane>
     <Pane fx:id="close_menu_pane" onMouseClicked="#close_menu_pane" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />

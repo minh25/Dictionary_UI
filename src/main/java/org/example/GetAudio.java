@@ -3,13 +3,15 @@ package org.example;
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 public class GetAudio {
     /**
      * if there is no file word.mp3 in data, it load data form the Internet, else do nothing.
      */
     public GetAudio (String key) throws IOException {
-        String path = "data\\" + key + ".mp3";
+        String path ="src/main/resources/org/example/data/" +  key + ".mp3";
         File file = new File(path);
         if (file.createNewFile()) {
             System.out.println("getting data from internet");
@@ -31,5 +33,21 @@ public class GetAudio {
         }
     }
 
+    void playMedia(String key) {
+//        String mp3 = "data/word.mp3";
+//        URL resource = getClass().getResource(mp3);
+//        System.out.println(resource.toString());
+//        Media media = new Media(resource.toString());
+//        MediaPlayer mediaPlayer = new MediaPlayer(media);
+//        mediaPlayer.play();
+        String mp3 = "src/main/resources/org/example/data/word.mp3";
+        Media hit = new Media(new File(mp3).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(hit);
+        mediaPlayer.play();
+    }
 
+    public static void main(String[] args) throws IOException {
+        new GetAudio("word");
+        new GetAudio("word").playMedia("word");
+    }
 }

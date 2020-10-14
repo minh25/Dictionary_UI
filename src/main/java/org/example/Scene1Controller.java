@@ -113,10 +113,25 @@ public class Scene1Controller {
                     AnchorPane.setRightAnchor(wv, 60.0);
                     AnchorPane.setTopAnchor(wv, 0.0);
 
+                    Pane pane = new Pane();
+                    AnchorPane.setBottomAnchor(pane, 40.0);
+                    AnchorPane.setRightAnchor(pane, 110.0);
+                    pane.setPrefHeight(40);
+                    pane.setPrefWidth(40);
+                    pane.setStyle("-fx-background-color: #ff0000");
+
+//                    pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
+//                        @Override
+//                        public void handle(MouseEvent mouseEvent) {
+//                        
+//                        }
+//                    });
+
                     show_meaning_pane_child.getChildren().removeAll();
-                    show_meaning_pane_child.getChildren().add(wv);
+                    show_meaning_pane_child.getChildren().addAll(wv, pane);
                 }
             });
+
 
             data.add(anchorPane);
         }
