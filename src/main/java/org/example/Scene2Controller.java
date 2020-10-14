@@ -1,23 +1,18 @@
 package org.example;
 
 import javafx.animation.FillTransition;
-import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.control.*;
-import javafx.scene.input.KeyEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
 import javafx.scene.web.WebView;
 import javafx.util.Duration;
 
@@ -50,7 +45,7 @@ public class Scene2Controller {
     public AnchorPane dict_pane;
     public AnchorPane open_your_word_pane;
     public AnchorPane open_gg_pane;
-    public AnchorPane info_pane;
+    public AnchorPane open_api_pane;
     public AnchorPane setting_pane;
     public AnchorPane buy_pane;
 
@@ -192,5 +187,9 @@ public class Scene2Controller {
 
     public void open_gg_pane(MouseEvent mouseEvent) throws IOException {
         App.setRoot("scene3");
+    }
+
+    public void open_api_pane(MouseEvent mouseEvent) throws IOException {
+        App.setRoot("scene4");
     }
 }

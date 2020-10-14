@@ -49,13 +49,12 @@ public class Get {
         String string = s.hasNext() ? s.next() : "";
         System.out.println(string);
         org.json.JSONObject x = new org.json.JSONObject(string);
-        //  String pro = ((JSONArray)((JSONObject)((JSONArray)x.get("results")).getJSONObject(0)).get("lexicalEntries")).getJSONObject(0).get("entries").
         result.set_content(x.get("results").toString());
         return result;
     }
 
     public static void main(String[] args) throws IOException {
-//        Word x = Get.GetWord("word");
+        Word x = Get.GetWord("word");
 //        System.out.println(x);
         GetAudio("word");
     }

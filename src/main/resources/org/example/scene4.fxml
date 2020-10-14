@@ -4,11 +4,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root_anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Scene3Controller">
-    <AnchorPane fx:id="search_bar_pane" onMouseClicked="#go_to_gg" prefHeight="40.0" styleClass="hover_class_9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <Pane fx:id="open_menu_pane" onMouseClicked="#open_menu_pane" prefHeight="40" prefWidth="40" styleClass="hover_class_7" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-    </AnchorPane>
-    <AnchorPane fx:id="google_translate_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+<AnchorPane fx:id="root_anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Scene4Controller">
+    <AnchorPane fx:id="dictionary_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane fx:id="search_bar_pane" prefHeight="40.0" styleClass="hover_class_9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Pane fx:id="open_menu_pane" onMouseClicked="#open_menu_pane" prefHeight="40" prefWidth="40" styleClass="hover_class_7" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="search_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+                <TextField fx:id="search_text_field" prefHeight="30" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            </AnchorPane>
+            <Pane fx:id="search_button_pane" onMouseClicked="#show_meaning_onMouseClicked" prefHeight="40" prefWidth="40" styleClass="hover_class_7" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        </AnchorPane>
+        <AnchorPane fx:id="show_meaning_pane" layoutY="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+            <AnchorPane fx:id="show_meaning_pane_child" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="0.0">
+            </AnchorPane>
+            <!--            <AnchorPane fx:id="voice_pane" prefHeight="40.0" prefWidth="40.0" styleClass="hover_class_7" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0" />-->
+        </AnchorPane>
     </AnchorPane>
     <Pane fx:id="close_menu_pane" onMouseClicked="#close_menu_pane" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
     <AnchorPane fx:id="menu" layoutX="-200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">

@@ -39,8 +39,8 @@
             <AnchorPane fx:id="open_gg_pane" onMouseClicked="#open_gg_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
                 <Label styleClass="menu_label" text="Google translate" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             </AnchorPane>
-            <AnchorPane fx:id="info_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
-                <Label styleClass="menu_label" text="Information" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="open_api_pane" onMouseClicked="#open_api_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+                <Label styleClass="menu_label" text="Oxford API" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             </AnchorPane>
             <AnchorPane fx:id="setting_pane" prefHeight="40.0" prefWidth="200.0" styleClass="list" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="160.0">
                 <Label styleClass="menu_label" text="Setting" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />

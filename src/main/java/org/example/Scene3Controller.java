@@ -1,28 +1,13 @@
 package org.example;
 
-import javafx.animation.FillTransition;
-import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.control.*;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
 import javafx.scene.web.WebView;
 import javafx.util.Duration;
 
 import java.io.IOException;
-import java.util.Objects;
 
 
 public class Scene3Controller {
@@ -37,7 +22,7 @@ public class Scene3Controller {
     public AnchorPane dict_pane;
     public AnchorPane open_your_word_pane;
     public AnchorPane open_gg_pane;
-    public AnchorPane info_pane;
+    public AnchorPane open_api_pane;
     public AnchorPane setting_pane;
     public AnchorPane buy_pane;
 
@@ -74,10 +59,14 @@ public class Scene3Controller {
         App.setRoot("scene3");
     }
 
+    public void open_api_pane(MouseEvent mouseEvent) throws IOException {
+        App.setRoot("scene4");
+    }
+
     public void go_to_gg(MouseEvent mouseEvent) {
         WebView webView = new WebView();
 
-        webView.getEngine().load("http://google.com");
+        webView.getEngine().load("https://translate.google.com.vn/?hl=en&tab=rT&authuser=0#view=home&op=translate&sl=en&tl=vi");
         AnchorPane.setTopAnchor(webView, 0.0);
         AnchorPane.setLeftAnchor(webView, 0.0);
         AnchorPane.setRightAnchor(webView, 0.0);

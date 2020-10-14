@@ -14,20 +14,53 @@ public class GetAudio {
         String path ="src/main/resources/org/example/data/" +  key + ".mp3";
         File file = new File(path);
         if (file.createNewFile()) {
-            System.out.println("getting data from internet");
-            String url = "https://ssl.gstatic.com/dictionary/static/sounds/20180430/"
-                    + key.toLowerCase()
-                    + "--_us_1.mp3";
-            URLConnection conn = new URL(url).openConnection();
-            InputStream is = conn.getInputStream();
+            try {
+                System.out.println("getting data from internet");
+                String url = "https://ssl.gstatic.com/dictionary/static/sounds/20180430/"
+                        + key.toLowerCase()
+                        + "--_us_1.mp3";
+                URLConnection conn = new URL(url).openConnection();
+                InputStream is = conn.getInputStream();
 
-            OutputStream outstream = new FileOutputStream(file);
-            byte[] buffer = new byte[4096];
-            int len;
-            while ((len = is.read(buffer)) > 0) {
-                outstream.write(buffer, 0, len);
+                OutputStream outstream = new FileOutputStream(file);
+                byte[] buffer = new byte[4096];
+                int len;
+                while ((len = is.read(buffer)) > 0) {
+                    outstream.write(buffer, 0, len);
+                }
+                outstream.close();
+            } catch (IOException e) {
+
+                System.out.println("getting data from internet");
+                String url = "https://ssl.gstatic.com/dictionary/static/sounds/20180430/"
+                        + key.toLowerCase()
+                        + "--_us_2.mp3";
+                URLConnection conn = new URL(url).openConnection();
+                InputStream is = conn.getInputStream();
+
+                OutputStream outstream = new FileOutputStream(file);
+                byte[] buffer = new byte[4096];
+                int len;
+                while ((len = is.read(buffer)) > 0) {
+                    outstream.write(buffer, 0, len);
+                }
+                outstream.close();
+            } catch (Exception e) {
+                System.out.println("getting data from internet");
+                String url = "https://ssl.gstatic.com/dictionary/static/sounds/20180430/"
+                        + key.toLowerCase()
+                        + "--_us_3.mp3";
+                URLConnection conn = new URL(url).openConnection();
+                InputStream is = conn.getInputStream();
+
+                OutputStream outstream = new FileOutputStream(file);
+                byte[] buffer = new byte[4096];
+                int len;
+                while ((len = is.read(buffer)) > 0) {
+                    outstream.write(buffer, 0, len);
+                }
+                outstream.close();
             }
-            outstream.close();
         } else {
             System.out.println("local data");
         }
@@ -47,7 +80,6 @@ public class GetAudio {
     }
 
     public static void main(String[] args) throws IOException {
-        new GetAudio("word");
-        new GetAudio("word").playMedia("word");
+        new GetAudio("abstract");
     }
 }

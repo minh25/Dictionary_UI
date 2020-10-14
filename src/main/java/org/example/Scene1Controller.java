@@ -1,26 +1,21 @@
 package org.example;
 
-import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.web.WebView;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.io.IOException;
 
 
@@ -34,7 +29,6 @@ public class Scene1Controller {
     public Pane search_button_pane;
     public AnchorPane show_meaning_pane;
     public AnchorPane show_meaning_pane_child;
-    public AnchorPane voice_pane;
     public Pane close_menu_pane;
     public AnchorPane menu;
     public AnchorPane account_pane;
@@ -42,7 +36,7 @@ public class Scene1Controller {
     public AnchorPane dict_pane;
     public AnchorPane open_your_word_pane;
     public AnchorPane open_gg_pane;
-    public AnchorPane info_pane;
+    public AnchorPane open_api_pane;
     public AnchorPane setting_pane;
     public AnchorPane buy_pane;
 
@@ -68,6 +62,11 @@ public class Scene1Controller {
     public void show_meaning_onMouseClicked(MouseEvent mouseEvent) {
 
         String word = search_text_field.getText();
+
+        if (word.equals("")) {
+            return;
+        }
+
         Dictionary list_word = App.dictionary.Find(word);
         String text = list_word.get(0)._content;
 
@@ -76,6 +75,10 @@ public class Scene1Controller {
 
     public void show_word_onKeyTyped(KeyEvent keyEvent) {
         String _word = search_text_field.getText();
+
+        if (_word.equals("")) {
+            return;
+        }
 
         Dictionary list_word = App.dictionary.Find(_word);
 
@@ -118,14 +121,23 @@ public class Scene1Controller {
                     AnchorPane.setRightAnchor(pane, 110.0);
                     pane.setPrefHeight(40);
                     pane.setPrefWidth(40);
-                    pane.setStyle("-fx-background-color: #ff0000");
+//                    pane.setStyle("-fx-background-image: url(\"src/main/resources/org/example/img/voice_image.png\")";
+                    pane.getStyleClass().add("voice_pane");
 
-//                    pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
-//                        @Override
-//                        public void handle(MouseEvent mouseEvent) {
-//                        
-//                        }
-//                    });
+                    pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent mouseEvent) {
+                            try {
+                                new GetAudio(word._target);
+                                String path = "src/main/resources/org/example/data/" + word._target + ".mp3";
+                                Media media = new Media(new File(path).toURI().toString());
+                                MediaPlayer mediaPlayer = new MediaPlayer(media);
+                                mediaPlayer.setAutoPlay(true);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
 
                     show_meaning_pane_child.getChildren().removeAll();
                     show_meaning_pane_child.getChildren().addAll(wv, pane);
@@ -168,5 +180,9 @@ public class Scene1Controller {
 
     public void open_gg_pane(MouseEvent mouseEvent) throws IOException {
         App.setRoot("scene3");
+    }
+
+    public void open_api_pane(MouseEvent mouseEvent) throws IOException {
+        App.setRoot("scene4");
     }
 }
